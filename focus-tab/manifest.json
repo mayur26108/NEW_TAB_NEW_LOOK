@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "FocusTab",
+  "version": "1.0",
+  "description": "Clock, Pomodoro, Editable Shortcuts, and Google Tasks iframe.",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": [
+    "storage"
+  ]
+}

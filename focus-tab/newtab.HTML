@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Tab</title>
+    <link rel="stylesheet" href="newtab.css">
+</head>
+<body>
+    <!-- Vertical Dock -->
+    <div id="dock">
+        <div id="dock-items"></div>
+        <div class="dock-item" id="add-shortcut-btn" title="Add Shortcut">+</div>
+    </div>
+
+    <!-- Modal for Adding Shortcuts -->
+    <div id="shortcut-modal" class="hidden">
+        <div class="modal-content">
+            <h3>Add Shortcut</h3>
+            <input type="text" id="shortcut-name" placeholder="Name (e.g., GH)" maxlength="3">
+            <input type="url" id="shortcut-url" placeholder="https://...">
+            <div class="modal-actions">
+                <button id="save-shortcut">Save</button>
+                <button id="close-modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scrollable Container -->
+    <div id="container">
+        <!-- Hero Section: Clock & Pomodoro -->
+        <div id="hero-section">
+            <div class="tabs">
+                <button class="tab active" data-target="clock">CLOCK</button>
+                <button class="tab" data-target="focus">FOCUS</button>
+                <button class="tab" data-target="short-break">SHORT BREAK</button>
+                <button class="tab" data-target="long-break">LONG BREAK</button>>
+            </div>
+
+            <div id="display-area">
+                <h1 id="time-display">22:00</h1>
+                <p id="date-display">LOADING...</p>
+            </div>
+            
+            <div class="scroll-prompt">Scroll down for Tasks ↓</div>
+        </div>
+
+        <!-- Custom Board Tasks Section -->
+        <div id="tasks-section">
+            <div class="boards-header-ui">
+                <h2>My Workspace</h2>
+                <button id="add-board-btn">+ Add New List</button>
+            </div>
+            <div id="boards-container">
+                <!-- Javascript will inject the category boards here -->
+            </div>
+        </div>
+    </div>
+    <script src="newtab.js"></script>
+</body>
+</html>
